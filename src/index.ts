@@ -1,4 +1,4 @@
-type usernsme = (n:string,m:string)=>string;
+type username = (n:string,m:string)=>string;
 
 //let a:usernsme="false"
 
@@ -12,13 +12,14 @@ interface Obj{
 
 interface newObj extends Obj{
     Qualif:number|string;
+    func?:(n:number,m:number) => void;
 }
 
 const func = (n:string,m:string):string =>{
     return String(n+m);
 }
 
-const func2:usernsme= (n,m)=> {
+const func2:username= (n,m)=> {
     return n+m;
 };
 
@@ -54,4 +55,13 @@ const newO :newObj={
     height:90,
     weight:90,
     Qualif:12
+}
+
+const newO2 :newObj={
+    height:90,
+    weight:90,
+    Qualif:"12",
+    func:(n,m)=>{
+        console.log(n*m)
+    },
 }

@@ -30,3 +30,11 @@ const newO = {
     weight: 90,
     Qualif: 12
 };
+const newO2 = {
+    height: 90,
+    weight: 90,
+    Qualif: "12",
+    func: (n, m) => {
+        console.log(n * m);
+    },
+};
