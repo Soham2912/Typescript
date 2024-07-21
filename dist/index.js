@@ -25,3 +25,8 @@ const obj3 = {
     height: 180,
     weight: 22,
 };
+const newO = {
+    height: 90,
+    weight: 90,
+    Qualif: 12
+};
