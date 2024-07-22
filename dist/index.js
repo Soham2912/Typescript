@@ -38,3 +38,4 @@ const newO2 = {
         console.log(n * m);
     },
 };
+newO2 ? func(20, 30) : ;

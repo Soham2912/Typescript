@@ -61,7 +61,9 @@ const newO2 :newObj={
     height:90,
     weight:90,
     Qualif:"12",
-    func:(n,m)=>{
-        console.log(n*m)
+    func:(n:number, m :number) => {
+        console.log(n * m);
     },
 }
+
+newO2?func(20,30);
