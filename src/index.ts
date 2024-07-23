@@ -103,26 +103,51 @@
 
 //     return n;
 // }
-interface prodt {
-    name:string;
-    stock:number;
-    price?:number;
-   readonly id:string
-//Optional property
+
+
+// interface prodt {
+//     name:string;
+//     stock:number;
+//     price?:number;
+//    readonly id:string
+// //Optional property
+// }
+
+// type obj = (product:prodt )=>void;
+
+// const getData:obj = (product)=>{
+//     console.log(product);
+//     //product.id="123";
+// }
+
+// const product1:prodt={
+//     name:"DPI",
+//     stock:1000,
+//     price:1.00,
+//     id:"1234"
+// }
+
+// getData(product1);
+
+//-----------------------------
+
+//Never type
+
+// const errHandler = ():never =>{
+//     throw new Error("Error");
+// } 
+
+class Player {
+
+
+    constructor( private height:number, public weight:number,protected power?:number){
+        
+    }
+     getHeight=()=>{
+        return this.height;
+    }
+
 }
-
-type obj = (product:prodt )=>void;
-
-const getData:obj = (product)=>{
-    console.log(product);
-    product.id="123";
-}
-
-const product1:prodt={
-    name:"DPI",
-    stock:1000,
-    price:1.00,
-    id:"1234"
-}
-
-getData(product1);
+ const player = new Player(34,30);
+   // console.log(player.height);
+    console.log(player.getHeight());
