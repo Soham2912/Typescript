@@ -140,6 +140,10 @@ const form = document.getElementById("form");
 const input = document.querySelector("form > input");
 form.onsubmit = (e) => {
     e.preventDefault();
-    console.log(input.value);
-    ;
+    const value = Number(input.value);
+    console.log(value);
+    console.log(typeof value);
+    const h2 = document.createElement("h2");
+    h2.textContent = String(value + 20);
+    document.querySelector("body").append(h2);
 };
