@@ -137,17 +137,56 @@
 //     throw new Error("Error");
 // } 
 
-class Player {
+// 
+// interface prodt {
+//     name:string;
+//     stock:number;
+//     price:number;
+//    // id:number| string;
 
+//     offer?:boolean;
+// }
 
-    constructor( private height:number, public weight:number,protected power?:number){
-        
-    }
-     getHeight=()=>{
-        return this.height;
-    }
+// interface GiveID{
+//     getid : () => string;
+// }
 
+// class Prod implements prodt,GiveID{
+//     public name: string;
+//     public stock: number;
+//     public price: number;
+//     private id : string=String(Math.random()*1000);
+//     public offer?: boolean;
+
+//     constructor(name:string,price:number,stock:number){
+//         this.name=name;
+//         this.price=price;
+//         this.stock=stock;
+//     }
+//     getid():string{
+//         return this.id;
+//     }
+// //get getid(){
+//   //  return this.id;
+
+// //}
+// }
+
+// const prod1 = new Prod("DPI",1.00,1000);
+// console.log(prod1.getid());
+
+//-----------------------------
+
+//DOM TS
+
+//const btn = document.getElementById("btn)!"!;)
+//const btn =<HTMLElement>document.getElementById("btn");
+const btn = document.getElementById("btn") as HTMLElement ;
+
+const img = document.getElementById("img") as HTMLImageElement;
+const form = document.getElementById("form") as HTMLFormElement;
+const input = document.querySelector("form > input") as HTMLInputElement;
+form.onsubmit = (e) =>{
+     e.preventDefault();
+ console.log(input.value);;
 }
- const player = new Player(34,30);
-   // console.log(player.height);
-    console.log(player.getHeight());

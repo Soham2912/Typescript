@@ -99,16 +99,47 @@
 // const errHandler = ():never =>{
 //     throw new Error("Error");
 // } 
-class Player {
-    constructor(height, weight, power) {
-        this.height = height;
-        this.weight = weight;
-        this.power = power;
-        this.getHeight = () => {
-            return this.height;
-        };
-    }
-}
-const player = new Player(34, 30);
-// console.log(player.height);
-console.log(player.getHeight());
+// 
+// interface prodt {
+//     name:string;
+//     stock:number;
+//     price:number;
+//    // id:number| string;
+//     offer?:boolean;
+// }
+// interface GiveID{
+//     getid : () => string;
+// }
+// class Prod implements prodt,GiveID{
+//     public name: string;
+//     public stock: number;
+//     public price: number;
+//     private id : string=String(Math.random()*1000);
+//     public offer?: boolean;
+//     constructor(name:string,price:number,stock:number){
+//         this.name=name;
+//         this.price=price;
+//         this.stock=stock;
+//     }
+//     getid():string{
+//         return this.id;
+//     }
+// //get getid(){
+//   //  return this.id;
+// //}
+// }
+// const prod1 = new Prod("DPI",1.00,1000);
+// console.log(prod1.getid());
+//-----------------------------
+//DOM TS
+//const btn = document.getElementById("btn)!"!;)
+//const btn =<HTMLElement>document.getElementById("btn");
+const btn = document.getElementById("btn");
+const img = document.getElementById("img");
+const form = document.getElementById("form");
+const input = document.querySelector("form > input");
+form.onsubmit = (e) => {
+    e.preventDefault();
+    console.log(input.value);
+    ;
+};
