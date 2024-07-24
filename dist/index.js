@@ -134,16 +134,33 @@
 //DOM TS
 //const btn = document.getElementById("btn)!"!;)
 //const btn =<HTMLElement>document.getElementById("btn");
-const btn = document.getElementById("btn");
-const img = document.getElementById("img");
-const form = document.getElementById("form");
-const input = document.querySelector("form > input");
-form.onsubmit = (e) => {
-    e.preventDefault();
-    const value = Number(input.value);
-    console.log(value);
-    console.log(typeof value);
-    const h2 = document.createElement("h2");
-    h2.textContent = String(value + 20);
-    document.querySelector("body").append(h2);
-};
+// const btn = document.getElementById("btn") as HTMLElement ;
+// const img = document.getElementById("img") as HTMLImageElement;
+// const form = document.getElementById("form") as HTMLFormElement;
+// const input = document.querySelector("form > input") as HTMLInputElement;
+// form.onsubmit = (e) =>{
+//      e.preventDefault();
+//      const value = Number(input.value);
+//  console.log(value);
+//  console.log(typeof value);
+//  const h2 = document.createElement("h2");
+//     h2.textContent = String(value +20);
+//     document.querySelector("body")!.append(h2); 
+// }
+//-------------------------------------
+// interface lol{
+//     email:string;
+//     name:string;
+// }
+// const myObj :lol ={
+//     email:"lol@gmail.com",
+//     name : "lol",
+// }
+// console.log(myObj);
+// const getData = (key: keyof lol) :string {
+//     return myObj[key];
+// }
+// let key = "name";
+// console.log(myObj[key as keyof typeof myObj]);
+// console.log(getData("email"));
+//
